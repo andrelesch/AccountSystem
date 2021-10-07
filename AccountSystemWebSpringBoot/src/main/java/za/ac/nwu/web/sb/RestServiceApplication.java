@@ -1,16 +1,11 @@
 package za.ac.nwu.web.sb;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class RestServiceApplication extends Application {
+@SpringBootApplication
+public class RestServiceApplication {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) {
-
+    public static void main(String[] args) {SpringApplication.run(RestServiceApplication.class, args);
     }
 }
