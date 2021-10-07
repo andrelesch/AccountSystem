@@ -13,4 +13,7 @@
     <artifactId>AccountSystemDomain</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+    </dependencies>
+
 </project>
