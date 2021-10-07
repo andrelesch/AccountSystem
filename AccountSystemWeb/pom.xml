@@ -13,14 +13,6 @@
     <artifactId>AccountSystemWeb</artifactId>
     <packaging>war</packaging>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>4.3.30.RELEASE</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
 
 </project>
