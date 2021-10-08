@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import za.ac.nwu.domain.service.GeneralResponse;
 
 @RestController
-@RequestMapping("account-type") //This is a specified URL 
+@RequestMapping("account-type") //This is a specified URL
 public class AccountTypeController {
 
     @GetMapping("/all")
