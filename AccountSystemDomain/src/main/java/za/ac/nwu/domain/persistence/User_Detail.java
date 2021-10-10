@@ -10,8 +10,8 @@ public class User_Detail implements Serializable {
 
 
     @Id
-    @Column(name = "NUMBER")
-    private Number number;
+    @Column(name = "USER_ID")
+    private Number user_id;
 
     @Column(name = "USER_ID_NUMBER")
     private String user_id_number;
@@ -34,8 +34,8 @@ public class User_Detail implements Serializable {
     @Column(name = "USER_STATUS")
     private String user_status;
 
-    public User_Detail(Number number, String user_id_number, String user_last_name, String user_first_name, Number user_mobile, Number user_age, String user_gender, String user_status) {
-        this.number = number;
+    public User_Detail(Number user_id, String user_id_number, String user_last_name, String user_first_name, Number user_mobile, Number user_age, String user_gender, String user_status) {
+        this.user_id = user_id;
         this.user_id_number = user_id_number;
         this.user_last_name = user_last_name;
         this.user_first_name = user_first_name;
@@ -49,12 +49,12 @@ public class User_Detail implements Serializable {
 
     }
 
-    public Number getNumber() {
-        return number;
+    public Number getUser_id() {
+        return user_id;
     }
 
-    public void setNumber(Number number) {
-        this.number = number;
+    public void setUser_id(Number user_id) {
+        this.user_id = user_id;
     }
 
     public String getUser_id_number() {
@@ -118,18 +118,18 @@ public class User_Detail implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User_Detail that = (User_Detail) o;
-        return Objects.equals(number, that.number) && Objects.equals(user_id_number, that.user_id_number) && Objects.equals(user_last_name, that.user_last_name) && Objects.equals(user_first_name, that.user_first_name) && Objects.equals(user_mobile, that.user_mobile) && Objects.equals(user_age, that.user_age) && Objects.equals(user_gender, that.user_gender) && Objects.equals(user_status, that.user_status);
+        return Objects.equals(user_id, that.user_id) && Objects.equals(user_id_number, that.user_id_number) && Objects.equals(user_last_name, that.user_last_name) && Objects.equals(user_first_name, that.user_first_name) && Objects.equals(user_mobile, that.user_mobile) && Objects.equals(user_age, that.user_age) && Objects.equals(user_gender, that.user_gender) && Objects.equals(user_status, that.user_status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, user_id_number, user_last_name, user_first_name, user_mobile, user_age, user_gender, user_status);
+        return Objects.hash(user_id, user_id_number, user_last_name, user_first_name, user_mobile, user_age, user_gender, user_status);
     }
 
     @Override
     public String toString() {
         return "User_Detail{" +
-                "number=" + number +
+                "user_id=" + user_id +
                 ", user_id_number='" + user_id_number + '\'' +
                 ", user_last_name='" + user_last_name + '\'' +
                 ", user_first_name='" + user_first_name + '\'' +
