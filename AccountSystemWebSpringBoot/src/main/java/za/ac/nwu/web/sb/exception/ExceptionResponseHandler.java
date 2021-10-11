@@ -1,4 +1,4 @@
-//package za.ac.nwu.web.sb.exception;
+//package za.ac.nwu.web.sb.za.ac.nwu.domain.exception;
 //
 //import org.springframework.http.HttpHeaders;
 //import org.springframework.http.HttpStatus;

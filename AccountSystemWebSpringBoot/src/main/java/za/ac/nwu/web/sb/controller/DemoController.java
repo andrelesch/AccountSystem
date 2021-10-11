@@ -95,7 +95,7 @@
 //    }
 //
 //    @GetMapping("/error")
-//    @ApiOperation(value = "Throws an exception")
+//    @ApiOperation(value = "Throws an za.ac.nwu.domain.exception")
 //    @ApiResponses(value = {
 //            @ApiResponse(code = 200, message = "The Ping was received and echoed", response = GeneralResponse.class),
 //            @ApiResponse(code = 400, message = "Bad Request", response = GeneralResponse.class),
