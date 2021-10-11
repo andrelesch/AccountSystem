@@ -19,11 +19,11 @@ import java.util.List;
 @RequestMapping("account-type") //This is a specified URL
 public class Discovery_AccountController {
 
-    private final FetchDiscovery_AccountFlow fetchAccountTypeFlow;
+    private final FetchDiscovery_AccountFlow fetchDiscovery_AccountFlow;
 
     @Autowired
-    public Discovery_AccountController(FetchDiscovery_AccountFlow fetchAccountTypeFlow) {
-        this.fetchAccountTypeFlow = fetchAccountTypeFlow;
+    public Discovery_AccountController(FetchDiscovery_AccountFlow fetchDiscovery_AccountFlow) {
+        this.fetchDiscovery_AccountFlow = fetchDiscovery_AccountFlow;
     }
     @GetMapping("/all")
     @ApiOperation(value = "gets all the configured Account types.", notes = "Returns a list of account types")
@@ -35,8 +35,8 @@ public class Discovery_AccountController {
     })
 
     public ResponseEntity<GeneralResponse<List<Discovery_Account_Dto>>> getAll() {
-        List<Discovery_Account_Dto> accountTypes = fetchAccountTypeFlow.getAllDiscovery_Account();
-        GeneralResponse<List<Discovery_Account_Dto>> response = new GeneralResponse<>(true, accountTypes);
+        List<Discovery_Account_Dto> discovery_Account = fetchDiscovery_AccountFlow.getAllDiscovery_Account();
+        GeneralResponse<List<Discovery_Account_Dto>> response = new GeneralResponse<>(true, discovery_Account);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
