@@ -9,7 +9,7 @@ import za.ac.nwu.logic.config.LogicConfig;
 @Configuration
 @ComponentScan(basePackages = {
         "za.ac.nwu.ac.web.sb.controller",
-        "za.ac.nwu.ac.web.sb.za.ac.nwu.web.sb.exception"
+        "za.ac.nwu.ac.web.sb.za.ac.nwu.web.sb.za.ac.nwu.domain.exception"
 })
 
 public class WebConfig {
