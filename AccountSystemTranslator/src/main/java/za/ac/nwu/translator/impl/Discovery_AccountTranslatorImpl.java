@@ -14,7 +14,7 @@ import java.util.List;
 @Component
 public class Discovery_AccountTranslatorImpl implements Discovery_AccountTranslator {
 
-    private final Discovery_Account_Repository discovery_account_repository;
+    private Discovery_Account_Repository discovery_account_repository;
 
     @Autowired
     public Discovery_AccountTranslatorImpl(Discovery_Account_Repository discovery_Account_Repository) {
@@ -22,14 +22,17 @@ public class Discovery_AccountTranslatorImpl implements Discovery_AccountTransla
     }
 
     @Override
-    public List<Discovery_Account_Dto> accountTypeDtos = new ArrayList<>();
-    try {
-        for (Discovery_Account accountType : Discovery_Account_Repository.findAll()) {
-            accountTypeDtos.add(new Discovery_Account_Dto(Discovery_Account));
-        } catch (Exception e) {
+    public List<Discovery_Account_Dto> getAllDiscovery_Accounts() {
+
+        List<Discovery_Account_Dto> discovery_AccountDtos = new ArrayList<>();
+        try {
+            for (Discovery_Account discovery_Account : discovery_account_repository.findAll()) {
+                discovery_AccountDtos.add(new Discovery_Account_Dto(discovery_Account));
+            }
+        } catch(Exception e){
+            // TODO: Log
             throw new RuntimeException("Unable to read from the DB", e);
         }
-
-        return accountTypeDtos;
+        return discovery_AccountDtos;
     }
 }
