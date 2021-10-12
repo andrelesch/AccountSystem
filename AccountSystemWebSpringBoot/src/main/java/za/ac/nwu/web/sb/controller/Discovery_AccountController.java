@@ -16,7 +16,7 @@ import za.ac.nwu.logic.flow.FetchDiscovery_AccountFlow;
 import java.util.List;
 
 @RestController
-@RequestMapping("account-type") //This is a specified URL
+@RequestMapping("Discovery-Account") //This is a specified URL
 public class Discovery_AccountController {
 
     private final FetchDiscovery_AccountFlow fetchDiscovery_AccountFlow;

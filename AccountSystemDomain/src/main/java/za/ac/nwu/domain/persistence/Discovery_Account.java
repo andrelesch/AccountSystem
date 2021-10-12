@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
@@ -31,7 +32,7 @@ public class Discovery_Account implements Serializable {
         this.user_level = user_level;
     }
 
-    public Discovery_Account() {
+    public Discovery_Account(String mnemonic, String discovery_accountName, LocalDate creationDate) {
 
     }
 
@@ -89,4 +90,13 @@ public class Discovery_Account implements Serializable {
                 ", user_level='" + user_level + '\'' +
                 '}';
     }
+
+    public LocalDate getCreationDate() {
+        return null;
+    }
+
+    public String getMnemonic() {
+        return null;
+    }
+
 }
